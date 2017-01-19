@@ -5,24 +5,39 @@
     <meta charset="UTF-8">
     <title>title</title>
     <style type="text/css">
-        /*div {*/
-        /*    height: 600px;*/
-        /*    width: 800px;*/
-        /*    background: radial-gradient(circle, yellow, green, blue);*/
-        /*}*/
-        
         body {
-            background: radial-gradient(circle, yellow, green, blue);;
+            background: radial-gradient(circle, yellow, green, blue);
         }
         
         h1 {
-            text-shadow: 1px 1px 6px white;
+            text-shadow: 1px 1px 9px purple;
+            text-align: center;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50px;
+            position: relative;
+            animation-name: circle;
+            animation-duration: 4s;
+        }
+        
+        @keyframes circle {
+            from {
+                background-color: white;
+            }
+            to {
+                background-color: black;
+            }
         }
     </style>
 </head>
 
 <body>
     <h1>CSS 3</h1>
+    <div></div>
 </body>
 
 </html>
