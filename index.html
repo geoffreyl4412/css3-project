@@ -15,18 +15,25 @@
         }
         
         div {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             background: white;
-            border-radius: 50px;
+            border-radius: 100px;
             position: relative;
             animation-name: shape;
-            animation-duration: 4s;
+            animation-duration: 7s;
+            transform: translate(850px,400px);
+        }
+        
+        div:hover {
+            width: 400px;
+            height: 400px;
+            border-radius: 200px;
         }
         
         @keyframes shape {
             from {
-                background-color: white;
+                background-color: orange;
             }
             to {
                 background-color: black;
