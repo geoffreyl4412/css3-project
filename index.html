@@ -6,49 +6,44 @@
     <title>title</title>
     <style type="text/css">
         body {
-            background: linear-gradient(-90deg, yellow, green);
+            /*background-image: url(http://i.vimeocdn.com/video/114698602_1280x720.jpg)*/
+            background: url(http://i.vimeocdn.com/video/114698602_1280x720.jpg) no-repeat fixed;
+            background-size: cover; /*space background covers whole page*/
         }
         
         h1 {
-            text-shadow: 1px 1px 9px purple;
+            text-shadow: 0px 0px 5px white;
             text-align: center;
         }
         
         div {
-            width: 200px;
-            height: 200px;
-            background: white;
-            border-radius: 100px;
-            position: absolute;
-            left: 44%;
-            top: 44%;
-            animation-name: shape;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            transition: width 2s, height 2s, transform 2s;
-            /*margin: 20px;*/
+            width: 300px;
+            height: 300px;
+            border-radius: 150px; /*creates round corners to make a circle*/
+            animation-name: circle;
+            animation-duration: 3s; /*animation takes 3 seconds to finish*/
+            animation-iteration-count: infinite; /*animation never stops*/
+            transition: transform 10s; /*the shape takes 10 seconds to get smaller*/
+            transform: translate(530px,100px); /*circle is in the center*/
         }
         
         div:hover {
-            transform: scale(.5,.5);
-            width: 300px;
-            height: 300px;
-            border-radius: 150px;
+            transform: scale(.1, .1); /*when the mouse is on the circle, it becomes 1/10 its size*/
         }
         
-        @keyframes shape {
+        @keyframes circle { /*tells the animation what to do*/
             from {
-                background-color: orange;
+                background: linear-gradient(-90deg, orange, yellow)
             }
             to {
-                background-color: black;
+                background: linear-gradient(-90deg, blue, purple)
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>CSS 3</h1>
+    <h1>CSS 3 in Space!</h1>
     <div></div>
 </body>
 
